@@ -113,6 +113,7 @@ app.post('/addProduct' , (req, res) => {
 
 app.post('/placeOrder' , (req, res) => {
     //save to database
+    //data 
     const orderDetails = req.body;
     orderDetails.orderTime = new Date();
     console.log(orderDetails);
@@ -134,5 +135,5 @@ app.post('/placeOrder' , (req, res) => {
 });
 
 
-const port = process.env.PORT || 42
+const port = process.env.PORT || 4200
 app.listen(port, () => console.log('listening to port 4200'));
